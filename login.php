@@ -42,11 +42,8 @@ unset($_SESSION['denegado']);
                         name="gmail" 
                         placeholder="Ingresa tu correo" 
                         required 
-                        autocomplete="email"
-                        aria-required="true"
                         class="<?= $denegado ? 'input-error' : '' ?>"
-                        aria-invalid="<?= $denegado ? 'true' : 'false' ?>"
-                        aria-describedby="<?= $denegado ? 'gmail-error' : '' ?>"
+                       
                     >
                     <?php if ($denegado): ?>
                         <p class="error-message" id="gmail-error" role="alert"><?= htmlspecialchars($denegado) ?></p>
@@ -63,11 +60,7 @@ unset($_SESSION['denegado']);
                         name="password" 
                         placeholder="Ingresa tu contraseña" 
                         required 
-                        autocomplete="current-password"
-                        aria-required="true"
                         class="<?= $error ? 'input-error' : '' ?>"
-                        aria-invalid="<?= $error ? 'true' : 'false' ?>"
-                        aria-describedby="<?= $error ? 'password-error' : '' ?>"
                     >
                     <?php if ($error): ?>
                         <p class="error-message" id="password-error" role="alert"><?= htmlspecialchars($error) ?></p>
