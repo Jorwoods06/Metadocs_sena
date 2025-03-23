@@ -1,0 +1,182 @@
+/* Estilo global */
+* {
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/*----------OBJETOS-----------*/
+main#cuerpo {
+    background: rgb(252, 252, 252);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#cont_img {
+    flex: 2.7;
+}
+
+#figure_img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#cont_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#form {
+    flex: 1.8;
+    place-items: center;
+    min-height: 100vh;
+    display: grid;
+    padding: 27px;
+}
+
+#formulario {
+    width: 100%;
+    max-width: 405px;
+}
+
+#logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+figure#logotipo {
+    position: relative;
+    margin: 0;
+}
+
+figure#logotipo img {
+    width: 180px;
+    display: block;
+    margin-top: -81px;
+}
+
+figure#logotipo p {
+    position: absolute;
+    margin: -67.5px 0 0 36px;
+    font-size: 12.6px;
+    color: #bfbfbf;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.input_login {
+    margin-bottom: 45px;
+    position: relative;
+}
+
+.input_login label {
+    display: block;
+    font-size: 13.5px;
+    margin-bottom: 9px;
+    font-weight: 500;
+}
+
+.input_login input {
+    width: 100%;
+    padding: 16.2px;  
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12.6px;
+    outline: none;
+}
+
+.input_login input:focus {
+    border-color: #8ABAC8;
+    box-shadow: 0 0 4.5px rgba(0, 0, 255, 0.2);
+}
+
+.error-message {
+    color: red; 
+    font-size: 0.81rem;
+    position: absolute;
+    margin-top: 4.5px;
+}
+
+input.input-error {
+    border: 1.62px solid red;
+}
+
+#recordar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 45px 0 0;
+    flex-wrap: wrap;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+#recordar label {
+    margin-left: 4.5px;
+    font-size: 12.6px;
+}
+
+#recordar a {
+    text-decoration: none;
+    color: #3D6889;
+    font-size: 12.6px;
+    white-space: nowrap;
+}
+
+#recordar a:hover {
+    text-decoration: underline;
+}
+
+#boton {
+    margin: 54px 0 0;
+    text-align: center;
+}
+
+#boton button {
+    background-color: #3D688A;
+    width: 45%;
+    min-width: 135px;
+    padding: 13.5px;
+    border-radius: 27px;
+    border: none;
+    font-size: 16.2px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#boton button:hover, #boton button:focus {
+    background-color: #2a4860;
+    outline: none;
+}
+
+#boton button:focus-visible {
+    outline: 2.7px solid #8ABAC8;
+}
+
+
+

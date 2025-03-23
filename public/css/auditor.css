@@ -1,0 +1,408 @@
+/* Estilo global */
+* {
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-size: 17.28px; /* 19.2px reducido en 10% */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    background-color: #f7fafc;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos del Header */
+#cabeza {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0.54rem 2.16rem; /* 0.6rem y 2.4rem reducidos en 10% */
+    height: 8.64vh; /* 9.6vh reducido en 10% */
+    min-height: 64.8px; /* 72px reducido en 10% */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+#logo {
+    margin: 0;
+}
+
+#logo img {
+    width: 19.44vw; /* 21.6vw reducido en 10% */
+    max-width: 194.4px; /* 216px reducido en 10% */
+    min-width: 129.6px; /* 144px reducido en 10% */
+}
+
+/* Iconos */
+#iconos ul {
+    display: flex;
+    gap: 17.28px; /* 19.2px reducido en 10% */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#iconos ul li {
+    display: inline-block;
+}
+
+#iconos button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 6.48px; /* 7.2px reducido en 10% */
+}
+
+#iconos i {
+    font-size: 1.728rem; /* 1.92rem reducido en 10% */
+    color: #4A5568;
+}
+
+/* Estructura principal */
+#cuerpo {
+    display: flex;
+    flex: 1;
+    height: calc(92vh - 8.64vh); /* Ajustado basado en el nuevo tamaño del header */
+    overflow: hidden;
+}
+
+/* Menú lateral */
+#menu-lateral {
+    width: 259.2px; /* 288px reducido en 10% */
+    min-width: 259.2px; /* 288px reducido en 10% */
+    background-color: #ffffff;
+    border-right: 1px solid #e2e8f0;
+    padding: 1.62rem 0; /* 1.8rem reducido en 10% */
+    overflow-y: auto;
+    height: 100%;
+    position: sticky;
+    top: 8.64vh; /* 9.6vh reducido en 10% */
+}
+
+#menu-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+
+#menu-lateral li {
+    margin-bottom: 10.8px; /* 12px reducido en 10% */
+}
+
+#menu-lateral a {
+    display: flex;
+    align-items: center;
+    padding: 0.972rem 1.62rem; /* 1.08rem y 1.8rem reducidos en 10% */
+    color: #4A5568;
+    text-decoration: none;
+    font-size: 1.134rem; /* 1.26rem reducido en 10% */
+    gap: 12.96px; /* 14.4px reducido en 10% */
+    font-weight: 500;
+}
+
+#menu-lateral a:hover {
+    background-color: #f1f5f9;
+}
+
+#menu-lateral svg {
+    color: #4A5568;
+    width: 21.6px; /* 24px reducido en 10% */
+    height: 21.6px; /* 24px reducido en 10% */
+}
+
+/* Submenú */
+.sub_menu {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.8s ease, opacity 0.8s ease;
+}
+
+li.open .sub_menu {
+    max-height: 194.4px; /* 216px reducido en 10% */
+    opacity: 1;
+}
+
+.sub_menu li {
+    margin-bottom: 6.48px; /* 7.2px reducido en 10% */
+}
+
+.sub_menu a {
+    padding: 0.756rem 1.08rem; /* 0.84rem y 1.2rem reducidos en 10% */
+    font-size: 1.026rem; /* 1.14rem reducido en 10% */
+}
+
+/* Estilos para elementos activos del menú */
+#menu-lateral a.active {
+    background-color: #3D688A;
+    color: #ffffff;
+    font-weight: 600;
+    padding-left: calc(1.62rem - 4.32px); /* Ajustado para coincidir con el nuevo padding */
+}
+
+#menu-lateral a.active svg {
+    color: #ffffff;
+}
+
+/* Estilo para el elemento padre cuando un submenú está activo */
+#menu-lateral a.parent-active {
+    background-color: #EDF2F7;
+    font-weight: 600;
+}
+
+/* Panel principal */
+.panel_admin {
+    flex: 1;
+    padding: 2.16rem; /* 2.4rem reducido en 10% */
+    overflow-y: auto;
+    height: 100%;
+}
+
+.panel_admin h1 {
+    margin-top: 0;
+    color: #2D3748;
+    font-size: 1.944rem; /* 2.16rem reducido en 10% */
+    font-weight: 600;
+    margin-bottom: 1.62rem; /* 1.8rem reducido en 10% */
+}
+
+.panel_admin p {
+    color: #4A5568;
+    line-height: 1.728; /* 1.92 reducido en 10% */
+    font-size: 1.08rem; /* 1.2rem reducido en 10% */
+}
+
+/* Menú hamburguesa */
+#menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 6.48px; /* 7.2px reducido en 10% */
+}
+
+#menu-toggle i {
+    font-size: 1.944rem; /* 2.16rem reducido en 10% */
+    color: #4A5568;
+}
+
+.solo_mobil{
+    display: none;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    
+    body, html {
+        font-size: 14px;
+    }
+    
+    #logo img {
+        width: 17vw;
+        max-width: 172px;
+    }
+    
+    #iconos i {
+        font-size: 1.9rem;
+    }
+    
+    #menu-lateral {
+        width: 237px;
+        min-width: 237px;
+    }
+    
+    #menu-lateral a {
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+    }
+    
+    .panel_admin h1 {
+        font-size: 1rem;
+    }
+    
+    .panel_admin {
+        padding: 1rem;
+    }
+
+   
+}
+
+/* Para tablets (768px - 1023px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+   
+    
+    #cabeza {
+        justify-content: space-between;
+        padding: 0 1.1rem; 
+        height: 80px; 
+    }
+    
+    #logo {
+        display: block;
+        order: 2;
+    }
+    
+    #logo img {
+        display: none;
+        width: 120px;
+    }
+    
+    #menu-toggle {
+        display: block;
+        order: 1;
+    }
+    
+    #iconos {
+        order: 3;
+    }
+    
+    #menu-lateral {
+        position: fixed;
+        left: 0;
+        height: 100vh;
+        z-index: 1000;
+        top: 0;
+        transform: translateX(-100%); 
+        transition: transform 0.3s ease;
+        width: 80%;
+        max-width: 250px;
+    }
+    
+    #menu-lateral.open {
+        transform: translateX(0);
+    }
+
+    #menu-lateral li {
+        margin-bottom: 35px;
+    }
+
+    .sub_menu li{
+        margin-top: 35px;
+    }
+    
+    .panel_admin {
+        padding: 1.6rem;
+        width: 100%;
+    }
+    
+    .panel_admin h1 {
+        font-size: 1.6rem;
+    }
+    
+    .panel_admin p {
+        font-size: 1rem;
+    }
+    
+    #iconos i {
+        font-size: 1.8rem;
+    }
+
+    .solo_mobil{
+        display: block;
+    }
+
+    div#cerrar_sesion{
+        top: 60px;   
+    }
+}
+
+/* Para dispositivos móviles (max-width: 767px) */
+@media only screen and (max-width: 767px) {
+    #cabeza {
+        justify-content: space-between;
+        padding: 0 1.1rem; 
+        height: 64px; 
+    }
+    
+    #logo {
+        display: block;
+        order: 2;
+    }
+    
+    #logo img {
+        display: none;
+        width: 120px;
+    }
+    
+    #menu-toggle {
+        display: block;
+        order: 1;
+    }
+
+    
+    #iconos {
+        order: 3;
+    }
+    
+    #menu-lateral {
+        position: fixed;
+        left: 0;
+        height: 100vh;
+        z-index: 1000;
+        top: 0;
+        transform: translateX(-100%); 
+        transition: transform 0.3s ease;
+        width: 80%;
+        max-width: 250px;
+    }
+    
+    #menu-lateral.open {
+        transform: translateX(0);
+    }
+
+    #menu-lateral li {
+        margin-bottom: 35px;
+    }
+
+    .sub_menu li{
+        margin-top: 35px;
+    }
+
+    .solo_mobil{
+        display: block;
+    }
+    
+    .panel_admin {
+        padding: 1.6rem;
+        width: 100%;
+    }
+    
+    .panel_admin h1 {
+        font-size: 1.6rem;
+    }
+    
+    .panel_admin p {
+        font-size: 1rem;
+    }
+    
+    #iconos i {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10.8px); /* -12px reducido en 10% */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateY(-10.8px); /* -12px reducido en 10% */
+    }
+}

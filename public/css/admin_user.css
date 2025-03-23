@@ -1,0 +1,184 @@
+.container {
+    padding: 0px 27px 0 27px;
+}
+
+.form-group {
+    margin-bottom: 13.5px;
+}
+
+.container h1{
+    margin-top: 27px;
+    margin-bottom: 4.5px;
+    font-size: 1.62rem;
+}
+
+.container p{
+    font-size: 0.72rem;
+    margin-top: 0;
+    margin-bottom: 36px;
+    color: #bfbfbf;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 7.2px;
+    height: 100%;
+}
+
+.form_info, .form_correo, .form-group, .rol_area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 18px;
+}
+
+.form-group div, .form_info div, .form_correo div, .rol_area div {
+    flex: 1 1 calc(50% - 9px);
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label{
+    margin-bottom: 4.5px;
+}
+
+.form-group input{
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 3.6px;
+    width: 100%;
+    outline: none;
+}
+
+.form_info label {
+    margin-bottom: 4.5px;
+}
+
+.form_correo label{
+    margin-bottom: 4.5px;
+}
+
+.form_correo input, .form_info input {
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 3.6px;
+    width: 100%;
+    outline: none;
+}
+
+.rol_area {
+    display: flex;
+    justify-content: space-between;
+    gap: 9px;
+    margin-bottom: 13.5px;
+}
+
+.rol_area div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.rol_area select{
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 3.6px;
+    width: 100%;
+    outline: none;
+}
+
+#boton_crear {
+    background-color: #3D688A;
+    color: white;
+    padding: 9px 18px;
+    border: none;
+    border-radius: 3.6px;
+    cursor: pointer;
+    display: flex;
+    align-self:flex-end;
+}
+
+.mensaje_exito, .correo_existente  {
+    position: fixed;
+    top: 36px;
+    right: 31.5%;
+    background-color: #d4edda;
+    color: #155724;
+    padding: 22.5px 18px;
+    border: 1px solid #c3e6cb;
+    border-radius: 4.5px;
+    box-shadow: 0 3.6px 5.4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 270px;
+    animation: fadeIn 0.5s ease-out, fadeOut 0.5s ease-in 4.5s forwards;
+}
+
+.mensaje_exito p, .correo_existente p{
+    margin: 0 auto;
+}
+
+.correo_existente{
+    background-color: #FFCDD2;
+    color: #B71C1C;
+    border: 1px solid #E57373;
+}
+
+.correo_existente .fa-solid, .fas {
+    margin: 0 9px 0 9px;
+    font-size: 1.08rem;
+}
+
+input#email.input-error{
+    border: 1.62px solid red;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 9px;
+    }
+
+    .form_info, .form_correo, .form-group, .rol_area {
+        flex-direction: column;
+        gap: 13.5px;
+    }
+
+    .form_info div, .form_correo div, .form-group div, .rol_area div {
+        flex: 1 1 100%;
+    }
+
+    #boton_crear {
+        display: flex;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    #boton_crear {
+        display: flex;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform:  translateY(-9px);
+    }
+    to {
+        opacity: 1;
+        transform:  translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform:  translateY(-9px);
+    }
+}

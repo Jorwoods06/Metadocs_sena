@@ -1,0 +1,680 @@
+/* Estilos para menú lateral activo */
+#menu-lateral a.active {
+    background-color: #3D688A;
+    color: #ffffff;
+    font-weight: 600;
+    padding-left: calc(1.5rem - 4px);
+}
+
+#menu-lateral a.active svg {
+    color: #ffffff;
+}
+
+/* Estilo para el elemento padre cuando un submenú está activo */
+#menu-lateral a.parent-active {
+    background-color: #EDF2F7;
+    font-weight: 600;
+}
+
+/* Contenedor principal */
+#cont_carpetas {
+    padding: 16px;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Title and buttons container */
+.title-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+#cont_carpetas h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+#cont_carpetas p {
+    color: #707070;
+    margin-top: 12px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Breadcrumb styles */
+.breadcrumb {
+    margin-bottom: 16px;
+    color: #555;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.breadcrumb a {
+    color: #3D688A;
+    text-decoration: none;
+    margin: 0 6px;
+    transition: color 0.2s;
+}
+
+.breadcrumb a:first-child {
+    margin-left: 0;
+}
+
+.breadcrumb a:hover {
+    color: #2a4860;
+    text-decoration: underline;
+}
+
+/* Sección de filtrado */
+#filtro {
+    margin: 16px 0 24px 0;
+    display: flex;
+    gap: 40px;
+}
+
+#filtro input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#filtro input::placeholder {
+    color: #aaa;
+}
+
+/* Estilos de botones */
+#btn_carpet, #btn_documento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    min-width: 160px;
+}
+
+#btn_carpet {
+    background-color: #3D688A;
+    color: #fff;
+    border: none;
+    width: 30%;
+}
+
+#btn_carpet:hover {
+    background-color: #2a4860;
+}
+
+#btn_documento {
+    background-color: #f7fafc;
+    border: 2px solid #C5C8C9;
+    color: #4A5568;
+}
+
+#btn_documento:hover {
+    background-color: #d6d8d9;
+}
+
+#filtro button svg, .header-buttons button svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Tabla de contenidos */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background: #fff;
+    border-radius: 8px;
+}
+
+thead tr {
+    border-bottom: 2px solid #e9ecef;
+}
+
+thead th {
+    padding: 14px;
+    font-weight: 600;
+    color: #495057;
+    text-align: left;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+thead th:first-child {
+    border-top-left-radius: 8px;
+}
+
+thead th:last-child {
+    border-top-right-radius: 8px;
+}
+
+#t_cuerpo tr {
+    cursor: pointer;
+}
+
+#t_cuerpo tr:hover {
+    background-color: #f5f5f5;
+}
+
+#t_cuerpo td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+    vertical-align: middle;
+}
+
+#t_cuerpo td:last-child {
+    text-align: center;
+    width: 50px;
+}
+
+/* Estilos de ítems */
+.item-name a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.item-icon {
+    margin-right: 16px;
+    font-size: 16px;
+}
+
+/* Menú de acciones */
+.actions-cell {
+    text-align: center;
+    width: 50px;
+    position: relative;
+}
+
+.action-menu-trigger {
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.action-menu-icon {
+    font-size: 16px;
+}
+
+.action-dropdown-menu {
+    right: 25px;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+}
+
+.action-dropdown-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px 14px;
+    border: none;
+    background: none;
+    color: #333;
+    font-size: 13px;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.action-dropdown-item:hover {
+    background-color: #f5f5f5;
+}
+
+.action-dropdown-icon {
+    margin-right: 8px;
+    font-size: 14px;
+    width: 18px;
+    text-align: center;
+}
+
+/* Estilos de modal - unificados */
+.modal, #cont_carpeta, #cont_documento {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+}
+
+.modal-content, #form_carpeta {
+    position: relative;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajuste específico para el modal de carpeta */
+#form_carpeta {
+    width: 350px;
+    margin: 40px auto;
+    padding: 16px;
+    border: 1px solid #ccc;
+    /* Posición centrada */
+    position: absolute;
+    top: 15%;
+    left: 40%;
+     /* Centrar horizontalmente */
+}
+
+.modal-content {
+    margin: 8% auto;
+    padding: 16px;
+    width: 70%;
+    max-width: 450px;
+}
+
+.close {
+    position: absolute;
+    right: 16px;
+    top: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #666;
+}
+
+.close:hover {
+    color: #333;
+}
+
+/* -----------------Modal formulario de carpeta ------------------*/
+#titulo_carpeta_header h2 {
+    text-align: center;
+    margin-bottom: 16px;
+    color: #333;
+    font-size: 20px;
+}
+
+#input_carpeta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#input_carpeta label {
+    font-size: 13px;
+    color: #555;
+    margin-top: 24px;
+}
+
+#input_carpeta input {
+    padding: 8px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#input_carpeta textarea {
+    width: 100%;
+    height: 90px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+    resize: vertical;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+}
+
+/* Botones */
+#btn_carpeta {
+    text-align: center;
+    margin-top: 16px;
+}
+
+#btn_carpeta button, .btn-delete {
+    padding: 8px 16px;
+    font-size: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#btn_carpeta button {
+    color: #fff;
+    background-color: #3D688A;
+}
+
+#btn_carpeta button:hover {
+    background-color: #2a4860;
+}
+
+.btn-delete {
+    background-color: #f44336;
+    color: white;
+    margin-top: 20px;
+    font-size: 13px;
+    padding: 6px 14px;
+}
+
+/* ------------Cargador de archivos------------- */
+.file-uploader {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* Posición centrada */
+    position: absolute;
+    top: 20%;
+    left: 35%;
+     /* Centrar horizontalmente */
+}
+
+.upload-area {
+    border: 2px dashed #3D688A;
+    border-radius: 8px;
+    padding: 50px 20px 40px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+    margin-bottom: 20px;
+}
+
+.upload-area:hover {
+    background-color: #e6f2ff;
+    border-color: #1e88e5;
+}
+
+.upload-area.drag-over {
+    background-color: #e6f2ff;
+    border-color: #1e88e5;
+}
+
+.upload-label {
+    color: #3D688A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+    font-size: 1.2rem;
+}
+
+.upload-label i {
+    font-size: 4rem;
+    margin-bottom: 16px;
+}
+
+#file-input {
+    display: none;
+}
+
+#file-list {
+    margin-top: 24px;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+.file-item {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+.form-group {
+    margin-top: 20px; 
+    text-align: left;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #2D3748;
+    margin-bottom: 6px; 
+}
+
+.form-select {
+    width: 100%;
+    padding: 10px; 
+    border: 1px solid #CBD5E0;
+    border-radius: 8px;
+    font-size: 0.95rem; 
+    color: #4A5568;
+    background-color: white;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M2.5 4.5L6 8L9.5 4.5' stroke='%233D688A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    cursor: pointer;
+}
+
+.form-select:focus {
+    border-color: #3D688A;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(61, 104, 138, 0.2);
+}
+
+.form-select option {
+    padding: 8px; 
+}
+
+#action-buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px; 
+}
+
+#action-buttons-container button {
+    padding: 10px 20px; 
+    border-radius: 6px;
+    font-size: 0.95rem; 
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#cancel-upload {
+    background-color: #f1f1f1;
+    border: 1px solid #d1d1d1;
+    color: #333;
+    margin-right: 12px; 
+}
+
+#cancel-upload:hover {
+    background-color: #e0e0e0;
+}
+
+#upload-file {
+    background-color: #3D688A;
+    border: none;
+    color: white;
+}
+
+#upload-file:hover {
+    background-color: #2a4860;
+}
+
+/* Animación única */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Elementos con animación */
+.modal-content, #form_carpeta, .file-uploader, .action-dropdown-menu {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Media query específico para Nest Hub  */
+@media (min-width: 1024px) and (max-width: 1280px) {
+    body, html {
+        font-size: 14px;
+    }
+    
+    #cont_carpetas h1 {
+        font-size: 2rem;
+    }
+    
+    #form_carpeta {
+        width: 320px;
+        padding: 14px;
+    }
+    
+    .file-uploader {
+        width: 450px;
+        padding: 25px;
+    }
+    
+    .upload-label i {
+        font-size: 3.5rem;
+    }
+    
+    #input_carpeta input,
+    #input_carpeta textarea {
+        font-size: 13px;
+    }
+    
+    #titulo_carpeta_header h2 {
+        font-size: 18px;
+    }
+    
+    .upload-area {
+        padding: 30px 16px;
+    }
+    
+  
+    #input_carpeta textarea {
+        height: 80px;
+    }
+    
+   
+    #btn_carpet, #btn_documento {
+        font-size: 0.9rem;
+        padding: 10px 14px;
+        min-width: 150px;
+    }
+}
+
+/* Estilo responsivo para mobiles*/
+
+
+@media (max-width: 768px) {
+    #cont_carpetas {
+        padding: 8px; 
+    }
+    
+    #cont_carpetas h1 {
+        font-size: 1.6rem; 
+    }
+    
+    #cont_carpetas p {
+        font-size: 0.85rem; 
+    }
+    
+    #filtro {
+        flex-direction: column;
+        gap: 12px; 
+        display: flex;
+        align-items: center;
+    }
+    
+    #filtro input {
+        font-size: 0.85rem;
+        padding: 8px; 
+    }
+    
+    #filtro button {
+        font-size: 0.9rem; 
+        padding: 8px; 
+        width: 100%;
+    }
+    
+    table {
+        font-size: 0.7rem;
+        white-space: nowrap;
+    }
+    
+    #form_carpeta {
+        width: 90%;
+        top: 60px; 
+    }
+    
+    #titulo_carpeta_header h2 {
+        font-size: 1.1rem; 
+    }
+    
+    #input_carpeta label {
+        font-size: 0.85rem; 
+    }
+    
+    #input_carpeta input,
+    #input_carpeta textarea {
+        font-size: 0.85rem; 
+    }
+    
+    .file-uploader {
+        padding: 20px; 
+        top: 40px; 
+    }
+    
+    .upload-area {
+        padding: 25px 12px; 
+    }
+    
+    .upload-label {
+        font-size: 1rem;
+    }
+    
+    .upload-label i {
+        font-size: 3rem;
+        margin-bottom: 12px;
+    }
+
+    .breadcrumb{
+        font-size: 0.8rem;
+    }
+}
