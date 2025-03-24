@@ -179,4 +179,107 @@ input.input-error {
 }
 
 
+@media (max-width: 767px) {
+    main#cuerpo {
+        flex-direction: column;
+    }
+
+    #cont_img {
+        display: none;
+    }
+
+    #form {
+        flex: 1;
+        width: 100%;
+        padding: 20px;
+    }
+
+    #form #formulario{
+        width: 100%;
+    }
+
+    
+
+    .input_login label {
+        margin-right: 0;
+        margin-top: 40px;
+        
+    }
+
+    .input_login input {
+        width: 100%;
+    }
+
+    #recordar label {
+        margin-right: auto;
+    }
+
+    #recordar a {
+        transform: translateX(0);
+    }
+
+    #boton button {
+        width: 100%;
+    }
+}
+
+/* Tablets */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #cont_img {
+        display: none;
+    }
+
+    #form {
+        flex: 3;
+        padding: 40px; 
+    }
+    
+    #formulario {
+        max-width: 85%; 
+    }
+    
+    figure#logotipo img {
+        width: 380px; 
+        margin-top: -90px;
+    }
+
+    figure#logotipo p {
+        margin: -135px 0 0 110px;
+        font-size: 1.3em;
+    }
+
+    .input_login {
+        margin-bottom: 50px; 
+    }
+    
+    .input_login label {
+        font-size: 1.5em; 
+        margin-bottom: 12px;
+    }
+    
+    .input_login input {
+        padding: 30px; 
+        font-size: 1.5em;
+        width: 100%;
+    }
+    
+    #recordar {
+        margin-top: 50px;
+    }
+    
+    #recordar label, #recordar a {
+        font-size: 1em; /* Texto más grande */
+    }
+    
+    #boton {
+        margin-top: 60px;
+    }
+    
+    #boton button {
+        padding: 20px;
+        font-size: 1.5em;
+        border-radius: 30px;
+    }
+}
 
